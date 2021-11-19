@@ -1,3 +1,5 @@
+package THE3;
+
 //设计闪避类
 abstract class Dodge {
     private Dodge next;

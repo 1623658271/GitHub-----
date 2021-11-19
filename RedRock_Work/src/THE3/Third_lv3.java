@@ -1,3 +1,5 @@
+package THE3;
+
 import java.util.*;
 
 public class Third_lv3 {

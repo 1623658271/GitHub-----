@@ -1,3 +1,5 @@
+package THE3;
+
 import java.util.Scanner;
 public class Third_lv2{
     public static void main(String[] args) throws Exception{
