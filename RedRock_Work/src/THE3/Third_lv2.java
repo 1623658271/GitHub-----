@@ -3,7 +3,6 @@ package THE3;
 import java.util.Scanner;
 public class Third_lv2{
     public static void main(String[] args) throws Exception{
-
         int atk;
         do {
             System.out.println("波斯王子的防御力为1000，请输入敌方攻击力(输入0时结束)");

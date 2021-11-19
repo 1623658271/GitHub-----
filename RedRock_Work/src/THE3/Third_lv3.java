@@ -6,22 +6,16 @@ public class Third_lv3 {
     public static void main(String[] args) {
         //实例化波吉对象
         KingBoJi kingBoJi = new KingBoJi();
-
         //实例化士兵群对象，将波吉作为参数加入
         Soldiers soldiers = new Soldiers(kingBoJi);
-
         //添加十个士兵
         kingBoJi.bigadd(0,10);
-
         //从第十个士兵开始添加，添加到20个士兵
         kingBoJi.bigadd(10,20);
-
         //删除第2个士兵
         kingBoJi.soldiers.remove(2);
-
         //开始阅兵
         kingBoJi.review();
-
         //士兵群回复
         soldiers.response();
     }

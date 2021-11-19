@@ -12,6 +12,7 @@ abstract class Dodge {
         this.next = next;
     }
 }
+
 //设计闪避系统1，继承闪避类
 class Dodgelv1 extends Dodge {
     public void dodgeEnermy(Enermy enermy) {
