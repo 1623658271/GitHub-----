@@ -20,7 +20,7 @@ public class lv3 {
 }
 class Calculator{
     public String[] kk;
-    public float equation(String s)throws Exception{
+    public float equation(String s){
         this.kk = s.split(" ");
         //判断算式是否符合要求，若不符合则抛出自定义异常，若符合则分情况讨论。
             if(is(kk)){
@@ -40,9 +40,18 @@ class Calculator{
         return 0;
     }
     //正则表达式判断输入的算式是否符合要求。
-    boolean is(String[] kk) throws Exception{
-        return kk[0].matches("\\-*\\d+\\.*\\d*") && kk[1].matches("[xX*\\-+/]")
-                && kk[2].matches("\\-*\\d+\\.*\\d*") && kk[3].matches("[=]");
+    boolean is(String[] kk) {
+        if(kk.length == 4){
+            return kk[0].matches("\\-*\\d+\\.*\\d*") && kk[1].matches("[xX*\\-+/]")
+                    && kk[2].matches("\\-*\\d+\\.*\\d*") && kk[3].matches("[=]");
+        } else {
+            try {
+                throw new MyExpection("算式格式错误！");
+            } catch (MyExpection myExpection) {
+                myExpection.printStackTrace();
+            }
+            return false;
+        }
     }
     static class MyExpection extends Exception{
         public MyExpection(String msg){
