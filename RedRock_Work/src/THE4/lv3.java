@@ -42,8 +42,8 @@ class Calculator{
     //正则表达式判断输入的算式是否符合要求。
     boolean is(String[] kk) {
         if(kk.length == 4){
-            return kk[0].matches("\\-*\\d+\\.*\\d*") && kk[1].matches("[xX*\\-+/]")
-                    && kk[2].matches("\\-*\\d+\\.*\\d*") && kk[3].matches("[=]");
+            return kk[0].matches("-*\\d+\\.*\\d*") && kk[1].matches("[xX*\\-+/]")
+                    && kk[2].matches("-*\\d+\\.*\\d*") && kk[3].matches("[=]");
         } else {
             try {
                 throw new MyExpection("算式格式错误！");
